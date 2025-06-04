@@ -2,87 +2,237 @@
 <html lang="ko">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>웹화면구현:박병준-ㅇㅇㅇ클로닝
-		//TODO: 타이틀에 본인 이름 넣기
-	</title>
-	<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>웹화면구현: 박병준 - 프로그래머스 클로닝</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
 </head>
 
 <body>
+	<!-- 상단 네비게이션 바 -->
 	<nav>
-		<div class="container">
-			//TODO: 메뉴 완성하기 (상단메뉴바 또는 사이드메뉴바) + 화면 사이즈에 따라 반응형으로 변경되도록 구현하기
-			<ul>
-				<li href="#">메뉴1
-					<ul>
-						<li href="#">서브메뉴1</li>
-						<li href="#">서브메뉴1</li>
-						<li href="#">서브메뉴1</li>
-					</ul>
+		<div class="container nav-container">
+			<h1 class="logo">Programmers</h1>
+			<ul class="nav-menu left-menu">
+
+				<!-- 교육 메뉴 -->
+				<li class="dropdown">
+					<a href="#">교육 ▾</a>
+					<div class="dropdown-content large-dropdown">
+						<div class="dropdown-column left">
+							<h4>교육홈</h4>
+							<h4><a href="#">강의</a></h4>
+							<ul>
+								<li><a href="#">데브코스</a></li>
+								<li><a href="#">영상/실습 강의</a></li>
+								<li><a href="#">PCCP.E 자격증</a></li>
+							</ul>
+						</div>
+						<div class="dropdown-column center">
+							<h4>MY 스쿨</h4>
+							<ul>
+								<li><a href="#">수강중인 코스</a></li>
+								<li><a href="#">관리중인 코스</a></li>
+							</ul>
+						</div>
+						<div class="dropdown-column right">
+							<h4>강사 신청</h4>
+							<ul>
+								<li><a href="#">강사/멘토풀 등록</a></li>
+							</ul>
+							<h4><a href="#">캠퍼스</a></h4>
+						</div>
+					</div>
 				</li>
-				<li href="#">메뉴1
-					<ul>
-						<li href="#">서브메뉴1</li>
-						<li href="#">서브메뉴1</li>
-						<li href="#">서브메뉴1</li>
-					</ul>
+
+				<!-- 데브코스 메뉴 -->
+				<li class="dropdown">
+					<a href="#">데브코스 ▾</a>
+					<div class="dropdown-content large-dropdown">
+						<div class="dropdown-column left">
+							<h4>데브코스 홈</h4>
+							<h4>웹 데브코스</h4>
+							<ul>
+								<li><a href="#">프론트엔드 과정</a></li>
+								<li><a href="#">백엔드 과정</a></li>
+								<li><a href="#">풀스택 과정</a></li>
+							</ul>
+						</div>
+						<div class="dropdown-column center">
+							<h4>데이터 데브코스</h4>
+							<ul>
+								<li><a href="#">데이터 분석 과정</a></li>
+								<li><a href="#">데이터 엔지니어링 과정</a></li>
+							</ul>
+						</div>
+					</div>
 				</li>
-				<li href="#">메뉴1
-					<ul>
-						<li href="#">서브메뉴1</li>
-						<li href="#">서브메뉴1</li>
-						<li href="#">서브메뉴1</li>
-					</ul>
+
+				<!-- 코딩테스트 메뉴 -->
+				<li class="dropdown">
+					<a href="#">코딩테스트 ▾</a>
+					<div class="dropdown-content large-dropdown">
+						<div class="dropdown-column left">
+							<h4>코딩테스트 문제</h4>
+							<ul>
+								<li><a href="#">모든 문제</a></li>
+								<li><a href="#">기초 문제</a></li>
+								<li><a href="#">입문 문제</a></li>
+								<li><a href="#">알고리즘 고득점 Kit</a></li>
+								<li><a href="#">SQL 고득점 Kit</a></li>
+								<li><a href="#">과제 테스트</a></li>
+								<li><a href="#">Q&A</a></li>
+							</ul>
+						</div>
+						<div class="dropdown-column center">
+							<h4>스킬체크</h4>
+						</div>
+					</div>
 				</li>
-				<li href="#">메뉴1
-					<ul>
-						<li href="#">서브메뉴1</li>
-						<li href="#">서브메뉴1</li>
-						<li href="#">서브메뉴1</li>
-					</ul>
-				</li>
+				<li><a href="#">인증시험</a></li>
 			</ul>
+			<div class="right-menu">
+				<a href="#">블로그</a>
+				<a href="#">기업서비스</a>
+				<a href="#">로그인</a>
+			</div>
 		</div>
 	</nav>
-	<main>
-		<div class="container">
-			<h1>웹화면 구현</h1>
-			//TODO: 여기에 본인이 구현하고자 하는 내용을 작성하세요.
+
+	<!-- 슬라이더 -->
+	<section class="slider-section">
+		<div class="slider-container">
+			<button class="slider-prev">◀</button>
+			<div class="slider-wrapper">
+				<div class="slide">
+					<img src="images/mock1.png" alt="슬라이드1" />
+					<div class="slide-text">공지사항 1</div>
+				</div>
+				<div class="slide">
+					<img src="images/mock2.png" alt="슬라이드2" />
+					<div class="slide-text">공지사항 2</div>
+				</div>
+				<div class="slide">
+					<img src="images/mock3.png" alt="슬라이드3" />
+					<div class="slide-text">공지사항 3</div>
+				</div>
+				<div class="slide">
+					<img src="images/mock4.png" alt="슬라이드4" />
+					<div class="slide-text">공지사항 4</div>
+				</div>
+				<div class="slide">
+					<img src="images/mock5.png" alt="슬라이드5" />
+					<div class="slide-text">공지사항 5</div>
+				</div>
+				<div class="slide">
+					<img src="images/mock6.png" alt="슬라이드6" />
+					<div class="slide-text">공지사항 6</div>
+				</div>
+			</div>
+			<button class="slider-next">▶</button>
 		</div>
+	</section>
+
+	<!-- 아이콘 섹션 -->
+	<section class="icon-section container">
+		<ul class="icon-list">
+			<li><i class="fa-solid fa-graduation-cap"></i>
+				<p>무료국비강의</p>
+			</li>
+			<li><i class="fa-solid fa-code"></i>
+				<p>코딩테스트문제</p>
+			</li>
+			<li><i class="fa-solid fa-book"></i>
+				<p>수강중인강의</p>
+			</li>
+			<li><i class="fa-brands fa-blogger"></i>
+				<p>블로그</p>
+			</li>
+			<li><i class="fa-solid fa-check-circle"></i>
+				<p>스킬체크</p>
+			</li>
+			<li><i class="fa-solid fa-certificate"></i>
+				<p>코딩역량인증시험</p>
+			</li>
+		</ul>
+	</section>
+
+	<!-- 강의 카드 -->
+	<section class="recommended-section container">
+		<h2>추천 강의</h2>
+		<div class="card-grid three-rows">
+			<div class="card">
+				<img src="/images/me_alone.jpg" alt="Python 입문 강의" />
+				<h3>Python 입문 강의</h3>
+				<p>프로그래밍의 기초부터 배우는 Python</p>
+			</div>
+			<div class="card">
+				<img src="/images/me_alone.jpg" alt="프론트엔드 로드맵" />
+				<h3>프론트엔드 로드맵</h3>
+				<p>HTML/CSS/JS부터 React까지</p>
+			</div>
+			<div class="card">
+				<img src="/images/me_alone.jpg" alt="코딩테스트 연습" />
+				<h3>코딩테스트 연습</h3>
+				<p>기업 코딩테스트 문제를 미리 경험해보세요</p>
+			</div>
+			<div class="card">
+				<img src="/images/me_alone.jpg" alt="React 강의" />
+				<h3>React 강의</h3>
+				<p>실무 중심 React 학습 과정</p>
+			</div>
+			<div class="card">
+				<img src="/images/me_alone.jpg" alt="Java 알고리즘" />
+				<h3>Java 알고리즘</h3>
+				<p>알고리즘 문제 해결 능력 키우기</p>
+			</div>
+			<div class="card">
+				<img src="/images/me_alone.jpg" alt="데이터 사이언스" />
+				<h3>데이터 사이언스</h3>
+				<p>기초부터 데이터 분석까지</p>
+			</div>
+			<div class="card">
+				<img src="/images/me_alone.jpg" alt="백엔드 입문" />
+				<h3>백엔드 입문</h3>
+				<p>Spring Framework 기본 이해</p>
+			</div>
+			<div class="card">
+				<img src="/images/me_alone.jpg" alt="모바일 앱 개발" />
+				<h3>모바일 앱 개발</h3>
+				<p>Android & iOS 앱 제작</p>
+			</div>
+			<div class="card">
+				<img src="/images/me_alone.jpg" alt="DevOps 기본" />
+				<h3>DevOps 기본</h3>
+				<p>CI/CD와 클라우드 환경 이해</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- 푸터 위 섹션 -->
+	<section class="info-links container">
+		<ul>
+			<li><a href="#">서비스 소식</a></li>
+			<li><a href="#">자주 묻는 질문</a></li>
+			<li><a href="#">출처</a></li>
+			<li><a href="#">개인정보이용방침</a></li>
+		</ul>
+	</section>
 	</main>
-	<section>
-		<div class="container">
-			<h2>섹션1</h2>
-			//TODO: 여기에 본인이 구현하고자 하는 내용을 작성하세요.
-		</div>
-	</section>
-		<section>
-		<div class="container">
-			<h2>섹션2</h2>
-			//TODO: 여기에 본인이 구현하고자 하는 내용을 작성하세요.
-		</div>
-	</section>
-	<section>
-		<div class="container">
-			<h2>섹션3</h2>
-			//TODO: 여기에 본인이 구현하고자 하는 내용을 작성하세요.
-		</div>
-	</section>
-	<section>
-		<div class="container">
-			<h2>섹션4</h2>
-			//TODO: 여기에 본인이 구현하고자 하는 내용을 작성하세요.
-		</div>
-	</section>
+
+	<!-- 푸터 -->
 	<footer>
 		<div class="container">
-			<p>© 2023 김똘똘. All rights reserved.</p>
-			//TODO: 본인의 닉네임, 이메일 주소, 저작권 표시 등을 작성하세요.
-			//FIXME: 특히, 가져온 그림에 대한 저작권 표시를 반드시 작성하세요.
+			<p>© 2025 박병준</p>
+			<p>이메일: qudwns526@naver.com</p>
+			<p>※ 2025 목원대학교 웹화면개발 기말과제</p>
 		</div>
 	</footer>
+
+	<script src="js/main.js"></script>
 </body>
 
 </html>
